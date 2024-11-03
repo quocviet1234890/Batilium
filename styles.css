@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: 'Bento', sans-serif; /* Sử dụng Bento Sans */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; /* Nền màu trắng */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 28px; /* Kích thước logo */
+    color: #4CAF50; /* Màu chữ logo */
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 16px;
+    transition: color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.nav-links a:hover {
+    color: #388E3C; /* Màu khi hover */
+}
+
+.language-selector {
+    position: relative; /* Để định vị danh sách ngôn ngữ */
+}
+
+.language-toggle {
+    display: none; /* Ẩn checkbox */
+}
+
+.language-display {
+    cursor: pointer; /* Đổi con trỏ khi hover */
+    padding: 10px 15px; /* Tạo khoảng cách bên trong */
+    border: 1px solid #4CAF50; /* Viền màu xanh */
+    border-radius: 5px; /* Bo góc */
+    display: flex;
+    align-items: center; /* Căn giữa nội dung */
+    background-color: #f9f9f9; /* Nền sáng cho hiển thị ngôn ngữ */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển nền */
+}
+
+.language-display:hover {
+    background-color: #f0f0f0; /* Nền sáng hơn khi hover */
+}
+
+.arrow {
+    margin-left: 5px; /* Khoảng cách giữa văn bản và mũi tên */
+}
+
+.language-options {
+    display: none; /* Ẩn danh sách ngôn ngữ */
+    position: absolute; /* Để đặt danh sách phía dưới */
+    background-color: white; /* Nền trắng cho danh sách */
+    border: 1px solid #4CAF50; /* Viền cho danh sách */
+    border-radius: 5px; /* Bo góc */
+    margin-top: 5px; /* Khoảng cách giữa hiển thị ngôn ngữ và danh sách */
+    z-index: 1000; /* Đảm bảo danh sách ở trên các phần tử khác */
+    width: 220px; /* Đặt chiều rộng cho danh sách */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng cho danh sách */
+}
+
+.language-toggle:checked + .language-display + .language-options {
+    display: block; /* Hiện danh sách ngôn ngữ khi checkbox được chọn */
+}
+
+.language-option {
+    padding: 10px 15px; /* Khoảng cách bên trong từng lựa chọn */
+    cursor: pointer; /* Đổi con trỏ khi hover */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển nền */
+    text-align: center; /* Căn giữa nội dung trong mục */
+    display: block; /* Đặt dạng khối để dễ căn giữa */
+}
+
+.language-option:hover {
+    background-color: #f0f0f0; /* Nền sáng hơn khi hover */
+}
+
+.profile a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-size: 16px;
+    padding: 8px 15px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.profile a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.content {
+    margin: 20px; /* Tạo khoảng cách cho nội dung */
+    font-size: 18px; /* Kích thước chữ cho nội dung */
+}

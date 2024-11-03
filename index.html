@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Batilium</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Batilium</div>
+        <ul class="nav-links">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Học</a></li>
+            <li><a href="#">Cộng đồng</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+        </ul>
+        <div class="language-selector">
+            <input type="checkbox" id="language-toggle" class="language-toggle">
+            <label for="language-toggle" class="language-display">
+                Tiếng Việt <span class="arrow">&#9662;</span>
+            </label>
+            <div class="language-options">
+                <label class="language-option" onclick="changeLanguage('vi')">Tiếng Việt</label>
+                <label class="language-option" onclick="changeLanguage('en')">English</label>
+                <label class="language-option" onclick="changeLanguage('fr')">Français</label>
+                <label class="language-option" onclick="changeLanguage('es')">Español</label>
+                <label class="language-option" onclick="changeLanguage('de')">Deutsch</label>
+                <label class="language-option" onclick="changeLanguage('ja')">日本語</label>
+                <label class="language-option" onclick="changeLanguage('zh')">中文</label>
+                <label class="language-option" onclick="changeLanguage('ko')">한국어</label>
+                <label class="language-option" onclick="changeLanguage('it')">Italiano</label>
+                <label class="language-option" onclick="changeLanguage('pt')">Português</label>
+                <label class="language-option" onclick="changeLanguage('ru')">Русский</label>
+                <label class="language-option" onclick="changeLanguage('ar')">العربية</label>
+                <label class="language-option" onclick="changeLanguage('tr')">Türkçe</label>
+                <label class="language-option" onclick="changeLanguage('pl')">Polski</label>
+                <label class="language-option" onclick="changeLanguage('nl')">Nederlands</label>
+                <label class="language-option" onclick="changeLanguage('sv')">Svenska</label>
+                <label class="language-option" onclick="changeLanguage('da')">Dansk</label>
+                <label class="language-option" onclick="changeLanguage('fi')">Suomi</label>
+                <label class="language-option" onclick="changeLanguage('no')">Norsk</label>
+                <label class="language-option" onclick="changeLanguage('hu')">Magyar</label>
+            </div>
+        </div>
+        <div class="profile">
+            <a href="#">Tài khoản</a>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1 id="welcome-message">Chào mừng đến với Batilium!</h1>
+        <p id="description">Nơi bạn có thể học nhiều ngôn ngữ khác nhau một cách vui vẻ và thú vị.</p>
+    </div>
+
+    <script>
+        const languageContent = {
+            vi: {
+                welcome: "Chào mừng đến với Batilium!",
+                description: "Nơi bạn có thể học nhiều ngôn ngữ khác nhau một cách vui vẻ và thú vị."
+            },
+            en: {
+                welcome: "Welcome to Batilium!",
+                description: "A place where you can learn many different languages in a fun and engaging way."
+            },
+            fr: {
+                welcome: "Bienvenue sur Batilium!",
+                description: "Un endroit où vous pouvez apprendre de nombreuses langues différentes de manière amusante et engageante."
+            },
+            es: {
+                welcome: "¡Bienvenido a Batilium!",
+                description: "Un lugar donde puedes aprender muchos idiomas diferentes de manera divertida y atractiva."
+            },
+            de: {
+                welcome: "Willkommen bei Batilium!",
+                description: "Ein Ort, an dem Sie viele verschiedene Sprachen auf unterhaltsame und ansprechende Weise lernen können."
+            },
+            ja: {
+                welcome: "Batiliumへようこそ！",
+                description: "楽しく魅力的に多くの異なる言語を学べる場所です。"
+            },
+            zh: {
+                welcome: "欢迎来到Batilium！",
+                description: "您可以在这里以有趣和吸引人的方式学习多种不同的语言。"
+            },
+            ko: {
+                welcome: "Batilium에 오신 것을 환영합니다!",
+                description: "재미있고 매력적인 방식으로 다양한 언어를 배울 수 있는 곳입니다."
+            },
+            it: {
+                welcome: "Benvenuto su Batilium!",
+                description: "Un posto dove puoi imparare molte lingue diverse in modo divertente e coinvolgente."
+            },
+            pt: {
+                welcome: "Bem-vindo ao Batilium!",
+                description: "Um lugar onde você pode aprender muitos idiomas diferentes de maneira divertida e envolvente."
+            },
+            ru: {
+                welcome: "Добро пожаловать в Batilium!",
+                description: "Место, где вы можете изучать многие разные языки увлекательным и интересным способом."
+            },
+            ar: {
+                welcome: "مرحبًا بك في Batilium!",
+                description: "مكان يمكنك من خلاله تعلم العديد من اللغات المختلفة بطريقة ممتعة وجذابة."
+            },
+            tr: {
+                welcome: "Batilium'ya hoş geldiniz!",
+                description: "Farklı dilleri eğlenceli ve ilgi çekici bir şekilde öğrenebileceğiniz bir yer."
+            },
+            pl: {
+                welcome: "Witamy w Batilium!",
+                description: "Miejsce, w którym możesz uczyć się wielu różnych języków w zabawny i angażujący sposób."
+            },
+            nl: {
+                welcome: "Welkom bij Batilium!",
+                description: "Een plek waar je op een leuke en boeiende manier veel verschillende talen kunt leren."
+            },
+            sv: {
+                welcome: "Välkommen till Batilium!",
+                description: "En plats där du kan lära dig många olika språk på ett roligt och engagerande sätt."
+            },
+            da: {
+                welcome: "Velkommen til Batilium!",
+                description: "Et sted, hvor du kan lære mange forskellige sprog på en sjov og engagerende måde."
+            },
+            fi: {
+                welcome: "Tervetuloa Batiliuum!",
+                description: "Paikka, jossa voit oppia monia eri kieliä hauskalla ja kiinnostavalla tavalla."
+            },
+            no: {
+                welcome: "Velkommen til Batilium!",
+                description: "Et sted hvor du kan lære mange forskjellige språk på en morsom og engasjerende måte."
+            },
+            hu: {
+                welcome: "Üdvözöljük a Batiliúm!",
+                description: "Olyan hely, ahol szórakoztató és vonzó módon tanulhat sok különböző nyelvet."
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.getElementById('welcome-message').innerText = languageContent[lang].welcome;
+            document.getElementById('description').innerText = languageContent[lang].description;
+
+            const selectedLanguage = document.querySelector('.language-display');
+            selectedLanguage.childNodes[0].nodeValue = lang === 'vi' ? 'Tiếng Việt' :
+                lang === 'en' ? 'English' :
+                lang === 'fr' ? 'Français' :
+                lang === 'es' ? 'Español' :
+                lang === 'de' ? 'Deutsch' :
+                lang === 'ja' ? '日本語' :
+                lang === 'zh' ? '中文' :
+                lang === 'ko' ? '한국어' :
+                lang === 'it' ? 'Italiano' :
+                lang === 'pt' ? 'Português' :
+                lang === 'ru' ? 'Русский' :
+                lang === 'ar' ? 'العربية' :
+                lang === 'tr' ? 'Türkçe' :
+                lang === 'pl' ? 'Polski' :
+                lang === 'nl' ? 'Nederlands' :
+                lang === 'sv' ? 'Svenska' :
+                lang === 'da' ? 'Dansk' :
+                lang === 'fi' ? 'Suomi' :
+                lang === 'no' ? 'Norsk' :
+                'Magyar';
+        }
+    </script>
+</body>
+</html>
