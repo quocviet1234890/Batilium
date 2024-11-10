@@ -87,52 +87,77 @@ button {
     vertical-align: middle; /* Căn chỉnh giữa */
 }
 footer {
-    background-color: #F4F6F8;
-    padding: 40px 0;
-    font-family: Arial, sans-serif;
-  }
-  
+  background: linear-gradient(145deg, #e74c3c, #d62c2f); /* Nền gradient */
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 20px;
+  min-width: 200px;
+}
+
+footer h3 {
+  font-size: 16px; /* Giảm kích thước font của tiêu đề */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 8px;
+}
+
+footer li a {
+  font-size: 14px; /* Giảm kích thước font của các liên kết */
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+footer li a:hover {
+  color: #e74c3c;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+footer .social-media a {
+  font-size: 14px; /* Giảm kích thước font cho các liên kết mạng xã hội */
+  margin-right: 10px;
+}
+
+footer .footer-column .social-media a:hover {
+  color: #fff;
+}
+
+footer li a:active {
+  color: #d62c2f;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
   .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
-  
   .footer-column {
-    flex: 1;
-    padding: 20px;
-    min-width: 200px;
-  }
-  
-  footer h3 {
-    color: #e74c3c;
-    font-size: 18px;
     margin-bottom: 20px;
+    text-align: center;
   }
-  
-  footer ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  footer li a {
-    color: #333;
-    text-decoration: none;
-    margin-bottom: 10px;
-    display: block;
-  }
-  
-  footer li a:hover {
-    text-decoration: underline;
-  }
-  
-  footer .footer-column .social-media a {
-    margin-right: 10px;
-  }
-  
-  footer .footer-column .social-media a:hover {
-    color: #e74c3c;
-  }
-  
+}
