@@ -1,21 +1,20 @@
-function toggleDropdown() {
-    const options = document.getElementById('language-options');
-    options.style.display = options.style.display === 'block' ? 'none' : 'block'; // Hiện/ẩn danh sách
+function toggleLanguageList() {
+    const languageList = document.getElementById("language-list");
+    languageList.classList.toggle("hidden");
 }
 
-function changeLanguage(language) {
-    const display = document.querySelector('.language-display');
-    display.innerHTML = language + ' <span class="arrow">&#9662;</span>'; // Cập nhật ngôn ngữ hiển thị
-    toggleDropdown(); // Ẩn danh sách sau khi chọn ngôn ngữ
+function selectLanguage(language) {
+    const languageButton = document.getElementById("language-button");
+    languageButton.textContent = language; // Cập nhật văn bản nút
+    toggleLanguageList(); // Đóng danh sách sau khi chọn ngôn ngữ
 }
 
-// Đóng danh sách nếu người dùng nhấp ra ngoài
-window.onclick = function(event) {
-    if (!event.target.matches('.language-display')) {
-        const options = document.getElementById('language-options');
-        if (options.style.display === 'block') {
-            options.style.display = 'none';
-        }
+// Thay đổi hành vi khi nhấn vào nút ngôn ngữ hiển thị
+document.getElementById("language-button").onclick = function() {
+    const currentLanguage = this.textContent;
+    if (currentLanguage === 'Tiếng Việt') {
+        toggleLanguageList(); // Hiển thị danh sách nếu đang là Tiếng Việt
+    } else {
+        this.textContent = 'Tiếng Việt'; // Trở về Tiếng Việt nếu chọn ngôn ngữ khác
     }
-}
-
+};

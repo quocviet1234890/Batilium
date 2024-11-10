@@ -1,116 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    font-family: 'Bento', sans-serif; /* Sử dụng Bento Sans */
+    background-color: #f4f4f4;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white; /* Nền màu trắng */
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white; /* Màu trắng cho navbar */
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
 }
 
 .logo {
-    font-size: 28px; /* Kích thước logo */
-    color: #4CAF50; /* Màu chữ logo */
+    font-size: 28px;
+    color: #e63946; /* Màu đỏ cho logo */
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
     font-weight: bold;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+.language {
+    background-color: #e63946; /* Nền màu đỏ cho nút Ngôn ngữ hiển thị */
+    color: white; /* Màu chữ trắng */
 }
 
-.nav-links li {
-    margin: 0 15px;
+.language:hover {
+    background-color: #d62839; /* Hiệu ứng hover */
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #4CAF50;
-    font-size: 16px;
-    transition: color 0.3s; /* Hiệu ứng chuyển màu */
-}
-
-.nav-links a:hover {
-    color: #388E3C; /* Màu khi hover */
-}
-
-.language-selector {
-    position: relative; /* Để định vị danh sách ngôn ngữ */
-}
-
-.language-toggle {
-    display: none; /* Ẩn checkbox */
-}
-
-.language-display {
-    cursor: pointer; /* Đổi con trỏ khi hover */
-    padding: 10px 15px; /* Tạo khoảng cách bên trong */
-    border: 1px solid #4CAF50; /* Viền màu xanh */
-    border-radius: 5px; /* Bo góc */
-    display: flex;
-    align-items: center; /* Căn giữa nội dung */
-    background-color: #f9f9f9; /* Nền sáng cho hiển thị ngôn ngữ */
-    transition: background-color 0.3s; /* Hiệu ứng chuyển nền */
-}
-
-.language-display:hover {
-    background-color: #f0f0f0; /* Nền sáng hơn khi hover */
-}
-
-.arrow {
-    margin-left: 5px; /* Khoảng cách giữa văn bản và mũi tên */
-}
-
-.language-options {
-    display: none; /* Ẩn danh sách ngôn ngữ */
-    position: absolute; /* Để đặt danh sách phía dưới */
-    background-color: white; /* Nền trắng cho danh sách */
-    border: 1px solid #4CAF50; /* Viền cho danh sách */
-    border-radius: 5px; /* Bo góc */
-    margin-top: 5px; /* Khoảng cách giữa hiển thị ngôn ngữ và danh sách */
-    z-index: 1000; /* Đảm bảo danh sách ở trên các phần tử khác */
-    width: 220px; /* Đặt chiều rộng cho danh sách */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng cho danh sách */
-}
-
-.language-toggle:checked + .language-display + .language-options {
-    display: block; /* Hiện danh sách ngôn ngữ khi checkbox được chọn */
-}
-
-.language-option {
-    padding: 10px 15px; /* Khoảng cách bên trong từng lựa chọn */
-    cursor: pointer; /* Đổi con trỏ khi hover */
-    transition: background-color 0.3s; /* Hiệu ứng chuyển nền */
-    text-align: center; /* Căn giữa nội dung trong mục */
-    display: block; /* Đặt dạng khối để dễ căn giữa */
-}
-
-.language-option:hover {
-    background-color: #f0f0f0; /* Nền sáng hơn khi hover */
-}
-
-.profile a {
-    text-decoration: none;
-    color: #4CAF50;
-    font-size: 16px;
-    padding: 8px 15px;
-    border: 1px solid #4CAF50;
+.language-list {
+    position: absolute;
+    top: 60px; /* Điều chỉnh vị trí danh sách */
+    right: 30px; /* Căn chỉnh với nút */
+    background-color: white;
+    border: 1px solid #e63946; /* Đường viền đỏ */
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
-.profile a:hover {
-    background-color: #4CAF50;
-    color: white;
+.language-list ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
 }
 
-.content {
-    margin: 20px; /* Tạo khoảng cách cho nội dung */
-    font-size: 18px; /* Kích thước chữ cho nội dung */
+.language-list li {
+    padding: 5px 10px;
+    cursor: pointer;
 }
+
+.language-list li:hover {
+    background-color: #f0f0f0; /* Hiệu ứng hover cho từng ngôn ngữ */
+}
+
+.hidden {
+    display: none; /* Ẩn danh sách khi không cần thiết */
+}
+.language-list img {
+    width: 20px; /* Đặt chiều rộng biểu tượng quốc kỳ */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    margin-right: 8px; /* Khoảng cách giữa biểu tượng và văn bản */
+    vertical-align: middle; /* Căn chỉnh giữa */
+}
+footer {
+    background-color: #F4F6F8;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-column {
+    flex: 1;
+    padding: 20px;
+    min-width: 200px;
+  }
+  
+  footer h3 {
+    color: #e74c3c;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer li a {
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  footer li a:hover {
+    text-decoration: underline;
+  }
+  
+  footer .footer-column .social-media a {
+    margin-right: 10px;
+  }
+  
+  footer .footer-column .social-media a:hover {
+    color: #e74c3c;
+  }
+  
