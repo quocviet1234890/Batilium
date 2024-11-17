@@ -161,3 +161,156 @@ footer li a:active {
     text-align: center;
   }
 }
+/* Cùng một phần CSS đã sử dụng trước đó */
+
+/* Form đăng nhập */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #d32f2f; /* Màu đỏ */
+}
+
+/* Các phần nhóm trường nhập liệu */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Các trường nhập liệu */
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #d32f2f; /* Đổi màu border khi focus */
+}
+
+/* Nút đăng nhập */
+button.login-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 30px;
+  background-color: #d32f2f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.login-btn:hover {
+  background-color: #b71c1c;
+}
+
+/* Liên kết đăng ký */
+.register-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.signup-link {
+  color: #d32f2f;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+/* Container chứa các nút */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Tiêu đề */
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #d32f2f; /* Màu đỏ */
+  font-weight: bold;
+}
+
+/* Các nút */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;  /* Khoảng cách giữa các nút */
+  width: 100%;  /* Đảm bảo nút chiếm toàn bộ chiều rộng */
+  max-width: 350px;  /* Đảm bảo nút không quá rộng */
+}
+
+.btn {
+  padding: 18px 30px;  /* Tăng padding cho các nút */
+  font-size: 18px;  /* Tăng kích thước chữ */
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;  /* Nút chiếm 100% chiều rộng của container */
+}
+
+/* Nút "Bắt đầu" với tông màu đỏ */
+.start-btn {
+  background-color: #d32f2f;  /* Màu đỏ */
+  color: white;
+}
+
+.start-btn:hover {
+  background-color: #b71c1c;  /* Màu đỏ đậm khi hover */
+  transform: scale(1.05);  /* Tạo hiệu ứng phóng to khi hover */
+}
+
+/* Nút "Tôi đã có tài khoản" */
+.login-btn {
+  background-color: #f0f0f0;
+  color: #4c4c4c;
+}
+
+.login-btn:hover {
+  background-color: #d4d4d4;  /* Màu xám đậm khi hover */
+  transform: scale(1.05);  /* Tạo hiệu ứng phóng to khi hover */
+}
