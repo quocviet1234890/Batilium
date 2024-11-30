@@ -314,3 +314,59 @@ button.login-btn:hover {
   background-color: #d4d4d4;  /* Màu xám đậm khi hover */
   transform: scale(1.05);  /* Tạo hiệu ứng phóng to khi hover */
 }
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Thêm khoảng cách từ phải */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa avatar và tên người dùng */
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  cursor: pointer; /* Thêm con trỏ khi hover vào avatar */
+  margin-left: 1001px;
+}
+
+.avatar:hover {
+  transform: scale(1.1); /* Thêm hiệu ứng zoom khi hover vào avatar */
+}
+
+.username {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+#logout-btn {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-left: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#logout-btn:hover {
+  background-color: #b71c1c;
+}
+
+/* Đảm bảo phần thông tin người dùng không hiển thị nếu chưa đăng nhập */
+#user-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}

@@ -1,0 +1,17 @@
+/* Container chứa avatar */
+.user-avatar-animation {
+    display: flex;
+    justify-content: flex-start; /* Căn hình ảnh sang bên trái */
+    padding-left: 20px; /* Khoảng cách từ bên trái */
+  }
+  
+  /* Cấu hình avatar */
+  #user-animation {
+    width: 500x; /* Kích thước lớn của avatar */
+    height: 200px; /* Kích thước lớn của avatar */
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+    image-rendering: -webkit-optimize-contrast; /* Cải thiện độ nét hình ảnh trong trình duyệt Chrome và Safari */
+    image-rendering: crisp-edges; /* Đảm bảo hình ảnh rõ nét khi phóng to */
+    margin-left: 100px;
+  }
+  
