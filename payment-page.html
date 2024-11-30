@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán Premium</title>
+    <link rel="stylesheet" href="./css/payment-page.css">
+</head>
+<body>
+    <div class="container">
+        <div class="payment-content">
+            <h1>Thanh toán cho gói Premium</h1>
+            <p class="payment-description">
+                Bạn sẽ dùng thử miễn phí trong 2 tuần. Sau khi kết thúc thời gian dùng thử, bạn sẽ tự động chuyển sang gói Premium với mức phí <strong>200.000 VNĐ/tháng</strong>. Nếu bạn không muốn tiếp tục, hãy hủy gói trước khi kết thúc thời gian dùng thử.
+            </p>
+            
+            <!-- Form nhập thông tin thanh toán -->
+            <form action="/process-payment" method="POST" class="payment-form">
+                <label for="card-number">Số thẻ tín dụng:</label>
+                <input type="text" id="card-number" name="card-number" placeholder="Số thẻ tín dụng" required>
+                
+                <label for="expiry-date">Ngày hết hạn:</label>
+                <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+                
+                <button type="submit" class="submit-btn">Hoàn tất thanh toán</button>
+            </form>
+
+            <p class="security-info">
+                <small>Thông tin thanh toán của bạn sẽ được bảo mật hoàn toàn.</small>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

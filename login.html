@@ -3,31 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Nhập</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
+
     <div class="login-container">
-        <div class="login-box">
-            <h1>Đăng Nhập</h1>
-
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Mật khẩu</label>
-                    <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
-                </div>
-                <button type="submit" class="btn login-btn">Đăng Nhập</button>
-            </form>
-
-            <div class="register-link">
-                <p>Chưa có tài khoản? <a href="signup.html" class="signup-link">Đăng ký</a></p>
+        <h2>Đăng nhập</h2>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="email">Địa chỉ email</label>
+                <input type="email" id="login-email" placeholder="Nhập email" required>
             </div>
-        </div>
+            <div class="input-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="login-password" placeholder="Nhập mật khẩu" required>
+            </div>
+            <button type="submit" class="login-btn">Đăng nhập</button>
+        </form>
+        <p>Chưa có tài khoản? <a href="register.html">Đăng ký ngay</a></p>
     </div>
+
+    <script src="./js/login.js"></script>
 </body>
 </html>
-

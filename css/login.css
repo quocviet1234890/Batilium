@@ -1,0 +1,92 @@
+/* Toàn bộ style chung */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff; /* Màu nền trắng */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #d32f2f; /* Màu đỏ chủ đạo */
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+    border-color: #d32f2f; /* Viền đỏ khi focus */
+    outline: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #d32f2f; /* Màu đỏ */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+    background-color: #c62828; /* Đỏ đậm khi hover */
+}
+
+p {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #555;
+}
+
+a {
+    color: #d32f2f; /* Màu đỏ */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}

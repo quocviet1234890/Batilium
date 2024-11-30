@@ -1,0 +1,182 @@
+/* Tổng thể trang */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4; /* Nền xám nhạt */
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Container cho bài kiểm tra */
+.quiz-container {
+  width: 90%;
+  max-width: 750px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề bài kiểm tra */
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+}
+
+/* Câu hỏi */
+.question {
+  margin-bottom: 25px;
+}
+
+/* Câu trả lời */
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Các nút trả lời */
+button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #e0e0e0; /* Màu nền xám nhạt cho nút */
+  color: #333; /* Màu chữ */
+  font-size: 1.1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+/* Hiệu ứng hover */
+button:hover {
+  background-color: #d5d5d5;
+  transform: scale(1.05);
+}
+
+/* Đáp án đã chọn - có màu đỏ khi được chọn */
+button.selected {
+  background-color: #ffebee; /* Nền đỏ nhạt khi chọn */
+  border-color: #b71c1c; /* Viền đỏ */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Khi một câu trả lời được chọn, các nút khác không thay đổi màu */
+button:focus {
+  outline: none;
+}
+
+/* Nút Nộp bài */
+#submit-btn {
+  background-color: #ffccbc; /* Màu nền nút Nộp bài */
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 16px;
+  width: 100%;
+  border-radius: 8px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+/* Hiệu ứng hover cho nút Nộp bài */
+#submit-btn:hover {
+  background-color: #ffb3a7;
+  transform: scale(1.05);
+}
+
+/* Phần kết quả */
+.result-container {
+  width: 90%;
+  max-width: 750px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề kết quả */
+.result-container h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+}
+
+/* Câu trả lời trong kết quả */
+.result-container p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Màu cho câu trả lời đúng và sai */
+.correct {
+  color: #4caf50; /* Màu xanh lá cho câu trả lời đúng */
+  font-weight: bold;
+}
+
+.incorrect {
+  color: #f44336; /* Màu đỏ cho câu trả lời sai */
+  font-weight: bold;
+}
+
+/* Điểm số */
+.score {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Nút thử lại */
+.retry-btn {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  padding: 12px 20px;
+  background-color: #1976d2; /* Màu xanh dương cho nút thử lại */
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hiệu ứng hover cho nút thử lại */
+.retry-btn:hover {
+  background-color: #1565c0;
+}
+
+/* Các phần tử trong bài kiểm tra, kết quả */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Cải thiện giao diện cho các nút và phần tử để nhìn thanh thoát hơn */
+button, #submit-btn, .retry-btn {
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+button.selected {
+  background-color: #ffebee; /* Đổi màu khi người dùng chọn đáp án */
+  border: 2px solid #b71c1c;
+  color: #b71c1c;
+}

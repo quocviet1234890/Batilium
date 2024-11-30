@@ -1,0 +1,99 @@
+/* Toàn bộ style chung */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #f1f1f1; /* Màu nền nhẹ cho navbar */
+    color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Phần chứa avatar và tên người dùng */
+.user-info {
+    display: flex;
+    align-items: center;
+    color: #333;
+    margin-left: auto; /* Đẩy sang phải */
+}
+
+/* Avatar */
+.user-info .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Nút đăng nhập / đăng xuất */
+.auth-btn {
+    background-color: #d32f2f; /* Màu đỏ cho nút đăng xuất / đăng nhập */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Màu hover khi di chuột vào nút */
+.auth-btn:hover {
+    background-color: #c62828; /* Màu đỏ nhạt khi hover */
+}
+
+/* Nút tiếng Việt */
+#language-switcher {
+    margin-left: 20px; /* Tạo khoảng cách giữa nút tiếng Việt và các phần tử bên trái */
+    display: flex;
+    align-items: center;
+}
+
+/* Đảm bảo phần tử bên phải (nút tiếng Việt, avatar, đăng nhập) đều nằm cùng một hàng */
+.navbar-content .user-info,
+.navbar-content #language-switcher {
+    display: flex;
+    align-items: center;
+}
+
+/* Thêm khoảng cách cho nút đăng nhập và nút tiếng Việt */
+.auth-btn {
+    margin-right: 10px; /* Tạo khoảng cách giữa nút đăng nhập và nút tiếng Việt */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-info {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    #language-switcher {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
