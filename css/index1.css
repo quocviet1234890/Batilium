@@ -66,13 +66,20 @@ a.start-action:hover {
 /* Nút "Tôi đã có tài khoản" */
 a.account-action {
   display: inline-block;  
-  background-color: white;
-  color: #e63946;
-  border: 2px solid #e63946;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 14px;
+  border: none;
   border-radius: 25px;
-  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;  
+  text-align: center;     
+  background-color: #e63946;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
   max-width: 300px;
+  transition: all 0.3s ease;
 }
 
 a.account-action:hover {
@@ -86,3 +93,4 @@ a.account-action:hover {
 button:focus {
   outline: none;
 }
+

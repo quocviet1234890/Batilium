@@ -1,0 +1,60 @@
+/* Reset các thuộc tính cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Cài đặt phông chữ cho trang */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+  }
+  
+  /* Thiết kế navbar */
+  .navbar {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Navbar container để canh giữa các phần tử */
+  .navbar-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+  }
+  
+  /* Thông tin người dùng (avatar và tên) */
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Avatar */
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+  
+  /* Tên người dùng */
+  #username {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Đảm bảo navbar không bị che bởi nội dung */
+  body {
+    padding-top: 60px; /* Giúp tránh bị che bởi navbar cố định */
+  }
+  

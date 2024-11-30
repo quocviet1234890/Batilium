@@ -1,0 +1,155 @@
+/* Reset các thuộc tính cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Cài đặt phông chữ cho trang */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Bố cục và căn giữa form đăng ký */
+  .register-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .register-container {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  /* Tiêu đề đăng ký */
+  h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Các nhóm input */
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Các input field */
+  input {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fafafa;
+  }
+  
+  /* Hiệu ứng khi focus vào input */
+  input:focus {
+    border-color: #f44336;
+    outline: none;
+    box-shadow: 0 0 8px rgba(244, 67, 54, 0.3);
+  }
+  
+  /* Nút đăng ký */
+  button {
+    width: 100%;
+    padding: 16px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    text-transform: uppercase;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hover và Active effect cho button */
+  button:hover {
+    background-color: #d32f2f;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Liên kết chuyển giữa đăng nhập và đăng ký */
+  .switch-form {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .switch-form a {
+    color: #f44336;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .switch-form a:hover {
+    color: #d32f2f;
+    transform: scale(1.05);
+  }
+  
+  /* Đảm bảo responsive */
+  @media (max-width: 480px) {
+    .register-container {
+      padding: 30px 20px;
+      width: 90%;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+  
+    input {
+      padding: 14px;
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 14px;
+      font-size: 16px;
+    }
+  }
+  
+  /* Animation Fade In */
+  @keyframes fadeIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

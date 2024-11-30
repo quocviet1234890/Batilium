@@ -1,28 +1,43 @@
-document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Ngừng gửi form để kiểm tra dữ liệu
+const loginForm = document.getElementById('login-form');
+const loginEmail = document.getElementById('login-email');
+const loginPassword = document.getElementById('login-password');
+const errorMessage = document.getElementById('error-message');
+
+// Kiểm tra nếu người dùng đã đăng nhập tự động (nếu có thông tin trong localStorage)
+document.addEventListener('DOMContentLoaded', function() {
+  const storedUser = localStorage.getItem('user');
   
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-  
-    // Kiểm tra thông tin đăng nhập (ví dụ: tài khoản và mật khẩu cố định)
-    if (username === 'user@gmail.com' && password === 'password123') {
-      // Lưu thông tin người dùng vào localStorage
-      localStorage.setItem('username', username);
-      localStorage.setItem('loggedIn', true);
-  
+  if (storedUser) {
+    // Nếu có thông tin người dùng, chuyển đến trang chủ
+    window.location.href = 'index.html'; // Đảm bảo đường dẫn đúng
+  }
+});
+
+// Xử lý đăng nhập
+loginForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const email = loginEmail.value;
+  const password = loginPassword.value;
+
+  // Kiểm tra thông tin đăng nhập từ localStorage
+  const storedUser = localStorage.getItem('user');
+  if (storedUser) {
+    const user = JSON.parse(storedUser);
+    if (email === user.email && password === user.password) {
       alert('Đăng nhập thành công!');
       
-      // Điều hướng đến index.html (trang chủ)
-      window.location.href = 'index.html';  // Chuyển hướng đến index.html
+      // Lưu thông tin người dùng vào localStorage (nếu chưa có)
+      localStorage.setItem('user', JSON.stringify(user));
+
+      // Chuyển đến trang chủ
+      window.location.href = 'index.html';  // Đảm bảo đường dẫn đúng
     } else {
-      // Hiển thị thông báo lỗi nếu đăng nhập không thành công
-      document.getElementById('error-message').textContent = 'Tài khoản hoặc mật khẩu không đúng.';
+      errorMessage.style.display = 'block';
+      errorMessage.textContent = 'Sai email hoặc mật khẩu. Vui lòng thử lại!';
     }
-  });
-  
-  // Kiểm tra trạng thái đăng nhập khi tải lại trang (để không vào lại trang đăng nhập nếu đã đăng nhập)
-  if (localStorage.getItem('loggedIn') === 'true') {
-    // Nếu người dùng đã đăng nhập, chuyển đến trang index.html (trang chủ)
-    window.location.href = 'index.html';  // Chuyển hướng đến trang chủ (index.html)
+  } else {
+    errorMessage.style.display = 'block';
+    errorMessage.textContent = 'Không có tài khoản nào. Vui lòng đăng ký!';
   }
-  
+});
