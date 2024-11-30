@@ -64,18 +64,23 @@ a.start-action:hover {
 }
 
 /* Nút "Tôi đã có tài khoản" */
-.account-action {
+a.account-action {
+  display: inline-block;  
   background-color: white;
   color: #e63946;
   border: 2px solid #e63946;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  text-decoration: none;
+  max-width: 300px;
 }
 
-.account-action:hover {
+a.account-action:hover {
   background-color: #e63946;
   color: white;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px); /* Nâng cao khi hover */
+  border-radius: 25px;
 }
 
 button:focus {
