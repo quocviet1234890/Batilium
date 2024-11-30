@@ -1,0 +1,83 @@
+/* Cấu hình font và cơ bản */
+.body-1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  display: flex;
+  justify-content: center;  /* Căn giữa theo chiều ngang */
+  align-items: center;      /* Căn giữa theo chiều dọc */
+  background-color: #ffffff; /* Nền màu trắng cho toàn bộ trang */
+}
+
+.welcome-container {
+  text-align: center;
+  background-color: #ffffff; /* Nền trắng cho container */
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  max-width: 100%; /* Đảm bảo không vượt quá chiều rộng của màn hình */
+  transition: all 0.3s ease; /* Hiệu ứng mượt mà khi hover */
+}
+
+.welcome-container:hover {
+  transform: translateY(-5px); /* Di chuyển lên khi hover */
+}
+
+.greeting-text h1 {
+  color: #e63946; /* Tông màu đỏ chính */
+  font-size: 26px;
+  margin-bottom: 40px;
+  font-weight: 600; /* In đậm để tạo sự nổi bật */
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Thẻ <a> sẽ trông như một nút */
+a.start-action {
+  display: inline-block;  /* Thẻ <a> sẽ giống nút */
+  padding: 14px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;   /* Loại bỏ gạch chân */
+  text-align: center;      /* Căn giữa nội dung */
+  background-color: #e63946;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px; /* Đảm bảo không quá rộng */
+  transition: all 0.3s ease;
+}
+
+a.start-action:hover {
+  background-color: #d32f2f;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px); /* Nâng cao khi hover */
+}
+
+/* Nút "Tôi đã có tài khoản" */
+.account-action {
+  background-color: white;
+  color: #e63946;
+  border: 2px solid #e63946;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account-action:hover {
+  background-color: #e63946;
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px); /* Nâng cao khi hover */
+}
+
+button:focus {
+  outline: none;
+}

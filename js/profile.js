@@ -1,12 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const username = localStorage.getItem("username");
     const email = localStorage.getItem("email");
     const phone = localStorage.getItem("phone");
     const address = localStorage.getItem("address");
     const dob = localStorage.getItem("dob");
 
-    if (username) {
-        document.getElementById("username-display").textContent = username;
+    if (email) {
         document.getElementById("email-display").textContent = email;
         document.getElementById("phone-display").textContent = phone;
         document.getElementById("address-display").textContent = address;
@@ -16,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.getElementById("logout-btn").addEventListener("click", function () {
-        localStorage.removeItem("username");
         localStorage.removeItem("email");
         localStorage.removeItem("phone");
         localStorage.removeItem("address");

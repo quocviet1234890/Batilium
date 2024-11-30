@@ -1,92 +1,122 @@
-/* Toàn bộ style chung */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #ffffff; /* Màu nền trắng */
+/* Cấu hình cơ bản */
+body, html {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif; /* Font chữ hiện đại */
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #333;
-}
-
-.login-container {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
+    justify-content: center;  /* Căn giữa theo chiều ngang */
+    align-items: center;      /* Căn giữa theo chiều dọc */
+    background-color: #f4f7fc; /* Nền sáng, dịu mắt */
+  }
+  
+  .login-container {
+    background-color: #ffffff; /* Nền trắng cho form */
+    padding: 40px 35px;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+    width: 360px;               /* Chiều rộng cố định */
+    max-width: 100%;
     text-align: center;
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-h2 {
-    font-size: 26px;
-    font-weight: 600;
-    color: #d32f2f; /* Màu đỏ chủ đạo */
+  }
+  
+  h1 {
+    color: #e63946; /* Màu đỏ chủ đạo */
     margin-bottom: 30px;
-}
-
-.input-group {
-    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase; /* Làm tiêu đề nổi bật */
+  }
+  
+  .input-group {
+    margin-bottom: 25px; /* Tăng khoảng cách giữa các input */
     text-align: left;
-}
-
-.input-group label {
+  }
+  
+  .input-group label {
     font-size: 14px;
     font-weight: 500;
-    color: #555;
+    color: #555; /* Màu xám nhẹ */
     margin-bottom: 8px;
-    display: block;
-}
-
-.input-group input {
+    display: block; /* Đảm bảo label nằm trên input */
+  }
+  
+  .input-group input {
     width: 100%;
-    padding: 12px;
+    padding: 14px; /* Padding đồng đều cho input */
+    border: 2px solid #ddd; /* Đường viền dày hơn để tạo sự rõ ràng */
+    border-radius: 10px; /* Tăng border-radius để tạo độ mềm mại cho góc */
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    background-color: #fafafa;
-    transition: border-color 0.3s ease-in-out;
-}
-
-.input-group input:focus {
-    border-color: #d32f2f; /* Viền đỏ khi focus */
-    outline: none;
-}
-
-.login-btn {
+    color: #333;
+    background-color: #f7f7f7; /* Màu nền của input */
+    box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến chiều rộng */
+  }
+  
+  input:focus {
+    outline: none; /* Loại bỏ outline mặc định */
+    border-color: #e63946; /* Màu viền khi focus */
+    background-color: #ffffff; /* Nền sáng khi focus */
+  }
+  
+  button.login-btn {
     width: 100%;
-    padding: 15px;
-    background-color: #d32f2f; /* Màu đỏ */
-    color: white;
+    padding: 14px;
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 10px; /* Border-radius đồng nhất với input */
+    background-color: #e63946; /* Màu đỏ */
+    color: white;
+    font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.login-btn:hover {
-    background-color: #c62828; /* Đỏ đậm khi hover */
-}
-
-p {
+    box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến chiều rộng */
+  }
+  
+  button.login-btn:hover {
+    background-color: #d32f2f; /* Đỏ đậm khi hover */
+  }
+  
+  button.login-btn:active {
+    transform: translateY(1px); /* Hiệu ứng nhấn nút */
+  }
+  
+  .signup-link {
+    margin-top: 20px;
+  }
+  
+  .signup-link p {
     font-size: 14px;
-    margin-top: 15px;
-    color: #555;
-}
-
-a {
-    color: #d32f2f; /* Màu đỏ */
-    text-decoration: none;
+    color: #555; /* Màu chữ cho liên kết */
+  }
+  
+  .signup-link a {
+    color: #e63946;
     font-weight: 600;
-}
-
-a:hover {
+    text-decoration: none;
+  }
+  
+  .signup-link a:hover {
     text-decoration: underline;
-}
+    color: #d32f2f; /* Màu đỏ đậm khi hover */
+  }
+  
+  /* Responsive cho các màn hình nhỏ */
+  @media (max-width: 400px) {
+    .login-container {
+      width: 90%; /* Giảm chiều rộng cho thiết bị nhỏ */
+      padding: 25px;
+    }
+  
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .input-group input {
+      font-size: 14px;
+    }
+  
+    button.login-btn {
+      font-size: 16px;
+    }
+  }
+  
