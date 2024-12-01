@@ -49,7 +49,7 @@ registerForm.addEventListener('submit', function(e) {
     phone,
     address,
     birthdate,
-    avatar: 'avatar.jpg'  // Gán avatar mặc định
+    avatar: './img/avatar.jpg'  // Gán avatar mặc định
   };
 
   // Thêm người dùng vào mảng
