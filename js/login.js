@@ -1,46 +1,48 @@
-// Lấy các phần tử từ DOM
-const loginForm = document.getElementById('loginForm');
-const emailInput = document.getElementById('email');
-const passwordInput = document.getElementById('password');
-const errorMessage = document.getElementById('error-message');
+document.addEventListener('DOMContentLoaded', function() {
+  // Lấy các phần tử DOM cần thiết
+  const loginForm = document.getElementById('login-form');
+  const loginEmail = document.getElementById('login-email');
+  const loginPassword = document.getElementById('login-password');
+  const errorMessage = document.getElementById('error-message');
 
-// Dữ liệu mẫu cho việc đăng nhập
-const users = JSON.parse(localStorage.getItem('users')) || [];
-
-// Lắng nghe sự kiện submit của form đăng nhập
-loginForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  const email = emailInput.value.trim();
-  const password = passwordInput.value.trim();
-
-  // Kiểm tra nếu trường nào còn trống
-  if (!email || !password) {
-    showError("Vui lòng điền đầy đủ thông tin.");
-    return;
+  // Kiểm tra nếu các phần tử tồn tại
+  if (!loginForm || !loginEmail || !loginPassword || !errorMessage) {
+    console.error("Một trong các phần tử DOM không tồn tại!");
+    return; // Dừng chương trình nếu phần tử không tồn tại
   }
 
-  // Kiểm tra thông tin đăng nhập
-  const user = users.find(u => u.email === email && u.password === password);
+  // Lắng nghe sự kiện submit của form đăng nhập
+  loginForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Ngừng việc gửi form mặc định
 
-  if (user) {
-    // Lưu thông tin người dùng đã đăng nhập vào sessionStorage
-    sessionStorage.setItem('loggedInUser', JSON.stringify(user));
-    
-    // Chuyển hướng đến trang chủ sau khi đăng nhập thành công
-    window.location.href = 'index.html'; // Đảm bảo đây là trang chủ của bạn
-  } else {
-    showError("Email hoặc mật khẩu không đúng.");
+    // Lấy giá trị email và mật khẩu
+    const email = loginEmail.value.trim();
+    const password = loginPassword.value.trim();
+
+    // Kiểm tra nếu các trường bị bỏ trống
+    if (!email || !password) {
+      showError("Vui lòng điền đầy đủ thông tin.");
+      return;
+    }
+
+    // Lấy danh sách người dùng từ localStorage
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    // Tìm người dùng trong danh sách
+    const user = users.find(u => u.email === email && u.password === password);
+
+    // Nếu người dùng hợp lệ, đăng nhập và chuyển hướng
+    if (user) {
+      sessionStorage.setItem('loggedInUser', JSON.stringify(user)); // Lưu thông tin người dùng
+      window.location.href = 'index.html'; // Chuyển hướng tới trang chủ
+    } else {
+      showError('Email hoặc mật khẩu không đúng.');
+    }
+  });
+
+  // Hàm hiển thị thông báo lỗi
+  function showError(message) {
+    errorMessage.textContent = message;
+    errorMessage.style.display = 'block';
   }
 });
-
-// Hàm hiển thị thông báo lỗi
-function showError(message) {
-  errorMessage.textContent = message;
-  errorMessage.style.display = 'block';
-}
-
-// Kiểm tra nếu đã đăng nhập, thì chuyển hướng người dùng đến trang chủ
-if (sessionStorage.getItem('loggedInUser')) {
-  window.location.href = 'index.html';
-}

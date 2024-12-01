@@ -7,8 +7,8 @@
   
   /* Cấu hình avatar */
   #user-animation {
-    width: 500x; /* Kích thước lớn của avatar */
-    height: 200px; /* Kích thước lớn của avatar */
+    width: 300x; /* Kích thước lớn của avatar */
+    height: 300px; /* Kích thước lớn của avatar */
     object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
     image-rendering: -webkit-optimize-contrast; /* Cải thiện độ nét hình ảnh trong trình duyệt Chrome và Safari */
     image-rendering: crisp-edges; /* Đảm bảo hình ảnh rõ nét khi phóng to */
